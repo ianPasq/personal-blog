@@ -131,6 +131,7 @@ footer {
   font-size: 18px;
   border-radius: 6px;
   transition: .3s;
+  
 }
 .left .content .social a span:hover {
   background: blueviolet;
