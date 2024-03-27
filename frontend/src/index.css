@@ -55,15 +55,20 @@ nav .nav-btn {
 
 .post-set {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
   padding: 2rem;
+  margin-left: 24.5rem;
 }
 
+.bg {
+  background-color: #04AA6D;
+}
 .main-div {
-  background-color: #ddd;
+  background-color: #112b2c;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  width: 24rem;
+  width: 20rem;
+  height: 26rem;
 }
 .scnd-div {
   margin: auto;
@@ -77,6 +82,22 @@ nav .nav-btn {
   column-gap: 2rem;
   row-gap: 4rem;
   padding: 2.5rem;
+}
+.article {
+  display: flex;
+  max-width: 36rem;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.timedisplay {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  font-size: 0.75rem;
+}
+.time {
+  background-color: grey;
 }
 
 
@@ -131,8 +152,6 @@ footer {
   font-size: 18px;
   border-radius: 6px;
   transition: .3s;
-
-  
 }
 .left .content .social a span:hover {
   background: blueviolet;
