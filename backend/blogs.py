@@ -1,6 +1,5 @@
-from flask import request, jsonify, Blueprint
-from auth import db, Post 
-from __init__ import app
+from flask import request, jsonify
+from __init__ import app, db, Post
 
 
 
@@ -10,7 +9,7 @@ def get_posts():
     pass
     
     
-@app.post("/posts", methods=["POST"])
+@app.route("/posts", methods=["POST"])
 def create_post():
     if request.method == "POST":
         post_title = request.form['name']
@@ -20,6 +19,14 @@ def create_post():
         db.session.add(my_data)
         db.session.commit()
         return
+    
+@app.route("/update", methods=["PUT"])
+def update_post():
+    pass
+
+@app.route("/delete", methods=["DELETE"])
+def delete_post():
+    pass
 
 
     
