@@ -54,6 +54,7 @@ nav .nav-btn {
 /*  POSTS  */
 
 .post-set {
+  height: 90vh;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
@@ -98,15 +99,6 @@ nav .nav-btn {
 }
 .time {
   background-color: grey;
-}
-
-
-
-footer {
-  position: relative;
-  width: 100%; 
-  bottom: 0px;
-  background-color: rgb(15, 15, 15);
 }
 
 
@@ -164,3 +156,4 @@ footer {
       grid-template-columns: repeat(1, minmax(0, 1fr)); 
   }
 }
+
