@@ -3,51 +3,51 @@
 
 function BlogPost() {
     return (
-      
-      <div>
-        <div className="main-div">
-          <div className="scnd-div">
-            <div className="trd-div">
-              <article className="article">
-                            <div className="timedisplay">
-                                <time datetime="2023-03-16"
-                                      className="time">
-                                    Mar 16, 2023
-                                </time>
-                                <a
-                                    href="#"
-                                    className="">
-                                    {/*props.content.department*/}
-                                </a>
-                            </div>
-                            <div className="">
-                                <h3 className="">
-                                    <a href="#">
-                                        <span className=""></span>
-                                        {/*props.content.title*/}
-                                    </a>
-                                </h3>
-                                <p className="">
-                                    {/*props.content.info*/}
-                                </p>
-                            </div>
-                            <div className="">
-                                <div className="">
-                                    <p className="">
-                                        <a href="#">
-                                            <span className=""></span>
-                                            {/*props.content.author*/}
-                                        </a>
-                                    </p>
-                                    <p className="">{}</p>
-                                </div>
-                            </div>
-                </article>
+      <section className="design" id="design">
+        <div className="all">
+            <div className="title">
+                <h2>browse blog posts</h2>
             </div>
+       
 
-          </div>
+            <div className="content-blog">
+                <div className="blog-posts">
+                    <div className="post-img">
+                        <img src="assets/coffee_template.jpg"/>
+                        <span></span>
+                        <span>blog posts</span>
+                    </div>
+                    <div className="post-title">
+                        <a href="#">how to do the spheroglifical dance of rain</a>
+                    </div>
+                </div>
+
+                <div className="blog-posts">
+                    <div className="post-img">
+                        <img src="assets/coffee_template.jpg"/>
+                        <span></span>
+                        <span>blog posts</span>
+                    </div>
+                    <div className="post-title">
+                        <a href="#">how to do the spheroglifical dance of rain</a>
+                        
+                    </div>
+                </div>
+
+                <div className="blog-posts">
+                    <div className="post-img">
+                        <img src="assets/coffee_template.jpg"/>
+                        <span></span>
+                        <span>blog posts</span>
+                    </div>
+                    <div className="post-title">
+                        <a href="#">how to do the spheroglifical dance of rain</a>
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </div>
+      </section>
     )
   }
   

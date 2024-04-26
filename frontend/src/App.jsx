@@ -30,11 +30,8 @@ function App() {
     return (
          <>
          <NavBar />
-         <div className='post-set'>
-                {postData.map((e) => {
-                    return <BlogPost content={e} />
-                })}
-         </div>
+         <BlogPost />
+             
          <Contact />
          <Footer />
 

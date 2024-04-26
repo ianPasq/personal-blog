@@ -1,15 +1,17 @@
 from flask import request, jsonify
-from __init__ import app, db, Post
+from __init__ import app, db
+from models import Post
 
 
 
 
 @app.route("/posts", methods=["GET"])
 def get_posts():
-    pass
+    return "hellooasd uahsd "
     
     
-@app.route("/posts", methods=["POST"])
+    
+@app.route("/create_posts", methods=["POST"])
 def create_post():
     if request.method == "POST":
         post_title = request.form['name']
