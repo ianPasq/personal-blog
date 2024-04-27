@@ -19,6 +19,7 @@ function BlogPost() {
                     </div>
                     <div className="post-title">
                         <a href="#">how to do the spheroglifical dance of rain</a>
+                        <button className="pos-btn">view post</button>
                     </div>
                 </div>
 
@@ -30,7 +31,7 @@ function BlogPost() {
                     </div>
                     <div className="post-title">
                         <a href="#">how to do the spheroglifical dance of rain</a>
-                        
+                        <button className="pos-btn">view post</button>
                     </div>
                 </div>
 
@@ -42,8 +43,23 @@ function BlogPost() {
                     </div>
                     <div className="post-title">
                         <a href="#">how to do the spheroglifical dance of rain</a>
+                        <button className="pos-btn">view post</button>
                     </div>
                 </div>
+
+                <div className="blog-posts">
+                    <div className="post-img">
+                        <img src="assets/coffee_template.jpg"/>
+                        <span></span>
+                        <span>blog posts</span>
+                    </div>
+                    <div className="post-title">
+                        <a href="#">how to do the spheroglifical dance of rain</a>
+                        <button className="pos-btn">view post</button>
+                    </div>
+                </div>
+
+                
 
             </div>
         </div>

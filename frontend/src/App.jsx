@@ -1,7 +1,6 @@
 import NavBar from "./components/navbar.jsx";
 import BlogPost from "./components/blogposts.jsx";
 import Footer from "./components/footer.jsx";
-import Contact from "./components/contact.jsx";
 
 function App() {
 
@@ -31,8 +30,6 @@ function App() {
          <>
          <NavBar />
          <BlogPost />
-             
-         <Contact />
          <Footer />
 
         </>
