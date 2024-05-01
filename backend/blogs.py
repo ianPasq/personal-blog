@@ -4,18 +4,16 @@ from models import Post
 
 
 
-
-@app.route("/posts", methods=["GET"])
-def get_posts():
-    return "hellooasd uahsd "
     
     
     
-@app.route("/create_posts", methods=["POST"])
-def create_post():
+@app.route("/create_posts", methods=["GET", "POST"])
+def create_post(): 
     if request.method == "POST":
         post_title = request.form['name']
         post_content = request.form['email']
+        if not post_title:
+            error = "you must have a title"
         
         my_data = Post(post_title, post_content)
         db.session.add(my_data)
