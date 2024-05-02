@@ -1,6 +1,6 @@
 from flask import redirect, render_template, Blueprint, flash, url_for, request, jsonify
 from __init__ import app, db
-from models import Post, User, Comment
+from models import Post, User
 from flask_login import login_required, current_user
 
 
@@ -30,10 +30,10 @@ def create_post():
             return redirect(url_for('blogs.home'))
     return render_template('create_post.html', user=current_user)
     
-@app.route("/update", methods=["PUT"])
-@login_required
-def update_post():
-    pass
+# @app.route("/update", methods=["PUT"])
+# @login_required
+# def update_post():
+#     pass    --- no update button yet --- 
 
 @app.route("/delete_post/<id>")
 @login_required

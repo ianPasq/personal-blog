@@ -23,7 +23,7 @@ def create_comment(post_id):
         else:
             flash('Post does not exist.', category='error')
 
-    return redirect(url_for('views.home'))
+    return redirect(url_for('blogs.home'))
 
 
 @blogs.route("/delete-comment/<comment_id>")
@@ -39,4 +39,4 @@ def delete_comment(comment_id):
         db.session.delete(comment)
         db.session.commit()
 
-    return redirect(url_for('views.home'))
+    return redirect(url_for('blogs.home'))
