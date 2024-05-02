@@ -15,6 +15,7 @@ def home():
     
     
 @app.route("/create_posts", methods=["GET", "POST"])
+@login_required
 def create_post(): 
     if request.method == "POST":
         post_title = request.form['post_title']
@@ -30,12 +31,37 @@ def create_post():
     return render_template('create_post.html', user=current_user)
     
 @app.route("/update", methods=["PUT"])
+@login_required
 def update_post():
     pass
 
-@app.route("/delete", methods=["DELETE"])
-def delete_post():
-    pass
+@app.route("/delete_post/<id>")
+@login_required
+def delete_post(id):
+    post = Post.query.filter_by(id=id).first()
+    
+    if not post:
+        flash("no post here '-' ", category='error')
+    elif current_user.id != post.id:
+        flash("you can't delete this post", category='error')
+    else:
+        db.session.delete(post)
+        db.session.commit()
+        flash("Post deleted successfully", category='success')
+        
+        return redirect(url_for('blogs.home'))
+    
+def posts(username):
+    user = User.query.filter_by(username=username).first()
+    
+    if not user:
+        flash('no user with that name...', category='error')
+        return redirect(url_for(blogs.home))
+    
+    posts = user.posts
+    return render_template('posts.html', user=current_user, posts=posts, username=username)
+
+    
 
 
     
