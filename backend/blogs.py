@@ -30,26 +30,39 @@ def create_post():
             return redirect(url_for('blogs.home'))
     return render_template('create_post.html', user=current_user)
     
-# @app.route("/update", methods=["PUT"])
-# @login_required
-# def update_post():
-#     pass    --- no update button yet --- 
+@app.route("/update_post/<int:id>", methods=["GET", "POST"])
+@login_required
+def update_post(id):
+    post = Post.query.get_or_404(id)
+    if post.author != current_user.id:
+        flash("You can't update this post", category='error')
+        return redirect(url_for('blogs.home'))
+    
+    if request.method == "POST":
+        post_title = request.form['post_title']
+        post_content = request.form['post_content']
+        if not post_title:
+            flash("you must have something written", category='error')
+        else:
+            post.post_title = post_title
+            post.post_content = post_content
+            db.session.commit()
+            flash('post updated!', category='success')
+            return redirect(url_for('blogs.home'))
+    return render_template('update_post.html', user=current_user, post=post)
 
-@app.route("/delete_post/<id>")
+@app.route("/delete_post/<int:id>")
 @login_required
 def delete_post(id):
-    post = Post.query.filter_by(id=id).first()
-    
-    if not post:
-        flash("no post here '-' ", category='error')
-    elif current_user.id != post.id:
-        flash("you can't delete this post", category='error')
-    else:
-        db.session.delete(post)
-        db.session.commit()
-        flash("Post deleted successfully", category='success')
-        
+    post = Post.query.get_or_404(id)
+    if post.author != current_user.id:
+        flash("You can't delete this post", category='error')
         return redirect(url_for('blogs.home'))
+
+    db.session.delete(post)
+    db.session.commit()
+    flash("Post deleted successfully", category='success')
+    return redirect(url_for('blogs.home'))
     
 def posts(username):
     user = User.query.filter_by(username=username).first()
@@ -60,9 +73,6 @@ def posts(username):
     
     posts = user.posts
     return render_template('posts.html', user=current_user, posts=posts, username=username)
-
-    
-
 
     
 

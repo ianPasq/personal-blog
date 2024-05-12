@@ -13,10 +13,6 @@ from models import User
 bcrypt = Bcrypt(app)
 
 
-
-
-
-
 auth = Blueprint('auth', __name__)
 
 login_manager = LoginManager()

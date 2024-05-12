@@ -1,6 +1,7 @@
 import NavBar from "./components/navbar.jsx";
 import BlogPost from "./components/blogposts.jsx";
 import Footer from "./components/footer.jsx";
+import AuthForm from "./components/auth.jsx";
 
 function App() {
 
@@ -31,7 +32,7 @@ function App() {
          <NavBar />
          <BlogPost />
          <Footer />
-
+         <AuthForm />
         </>
     
     )
