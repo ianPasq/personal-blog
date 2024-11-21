@@ -1,4 +1,4 @@
-from __init__ import db
+from . import db
 
 
 
@@ -28,3 +28,7 @@ class Comment(db.Model):
     comment = db.Column(db.String(300), nullable=False)
     author = db.Column(db.Integer, db.ForeignKey('user.id', ondelete="CASCADE"), nullable=False)
     post_id = db.Column(db.Integer, db.ForeignKey('post.id', ondelete="CASCADE"), nullable=False)
+
+
+if __name__ == '__main__':
+    app.run(debug=True)

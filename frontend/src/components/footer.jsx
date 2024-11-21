@@ -7,13 +7,13 @@ function Footer() {
             <div class="footer">
                 <div className="row">
                     <img
-                        src="./assets/linkedin.png"
+                        //src="./assets/linkedin.png"
                         alt="My LinkedIn profile"
                         class="icon"
                         onclick="location.href='https://www.linkedin.com/in/ianpasquali'"
                     />
                     <img
-                        src="./assets/github.png"
+                        //src="./assets/github.png"
                         alt="My Github profile"
                         class="icon"
                         onclick="location.href='https://github.com/bearsyker'"

@@ -1,5 +1,5 @@
 from flask import redirect, render_template, Blueprint, flash, url_for, request, jsonify
-from __init__ import app, db
+from . import app, db
 from models import Post, User
 from flask_login import login_required, current_user
 

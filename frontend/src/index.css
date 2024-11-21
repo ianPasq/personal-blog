@@ -1,19 +1,15 @@
-html {
-  background-color: rgb(8, 10, 10);
+body {
+  background-color: rgb(39, 4, 0);
   color: rgb(124, 99, 67);
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  
-}
-body {
-  margin: 0;
-  padding: 0;
+  scroll-behavior: smooth;
+  min-height: 100%;
 }
 
 
 nav  {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.615);
   text-align: center;
   padding: 10px;
   color: rgb(231, 184, 122);
@@ -29,7 +25,7 @@ nav a:hover {
   transition: .5s;
 }
 nav a.active {
-  background-color: #04AA6D;
+  background-color: #604502;
   color: white;
 }
 nav a {
@@ -59,27 +55,39 @@ nav .nav-btn {
 /*  POSTS  */
 
 .design {
-  padding: 4.5rem 0;
+  text-align: center;
+  margin: 2rem 0;
+  height: 100%;
 
 }
-.title {
-  text-align: center;
-  padding: 1rem 0;
-  cursor: default;
-  color: #fde39d;
-}
 .content-blog {
-  margin: 2rem 0;
   display: flex;
   gap: 30px;
   justify-content: center;
   flex-wrap: wrap;
 }
-.blog-posts {
-  cursor: pointer;
-  margin: 1.5rem 0;
-
+.title {
+  text-align: center;
+  padding: 4rem 0;
+  cursor: default;
+  color: #fde39d;
 }
+
+.blog-posts{
+  width: 30%;
+  min-width: 350px;
+  padding: 40px 32px;
+  border: 1px solid wheat;
+  border-radius: 10px;
+  box-shadow: 15px 20px 20px rgba(0, 0, 0, 0.43);
+  margin: 15px 50px;
+  transition: 0.3s ease;
+  background-color: #61616133;
+}
+.blog-posts:hover img{
+  transform: scale(1.2);
+}
+
 .post-img {
   position: relative;
   overflow: hidden;
@@ -96,20 +104,10 @@ nav .nav-btn {
 .post-img img{
   transition: all 0.5s ease;
 }
-.blog-posts{
-  background-color: rgba(128, 128, 128, 0.425);
-  width: 20rem;
-  border-radius: 7px;
-  height: 12rem;
-}
-.blog-posts:hover img{
-  transform: scale(1.2);
-}
+
 .post-title {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  font-size: 1.2rem;
+  padding: 0.7rem;
+  font-size: 1.5rem;
   text-align: center;
   width: 70%;
   margin: 0 auto;
@@ -130,8 +128,8 @@ nav .nav-btn {
   cursor: pointer;
   display: inline-block;
   font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
   line-height: 2.5;
   outline: transparent;
   padding: 0 1rem;
@@ -151,18 +149,197 @@ nav .nav-btn {
 }
 
 
+    /* CONTENT-POST */
+
+.posts-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #2222226b;
+}
+.post-obj {
+  padding: 0 35px;
+  width: 800px;
+  height: 100%;
+  background-color: #000000;
+  text-align: center;
+  border: 1px solid wheat;
+}
+.post-main-img {
+  padding: 40px;
+}
+.post-intro {
+  padding: 20px;
+}
+
+    /* REGISTER FORM */
+
+.wrapper{
+  margin: 170px auto;
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  padding: 34px;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.wrapper h2{
+  position: relative;
+  font-size: 22px;
+  font-weight: 600;
+  color: #fefefe;
+}
+.wrapper h2::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 28px;
+  border-radius: 12px;
+  background: #f44040;
+}
+.wrapper form{
+  margin-top: 30px;
+}
+.wrapper form .input-box{
+  height: 52px;
+  margin: 18px 0;
+}
+form .input-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  border: 1.5px solid #C7BEBE;
+  border-bottom-width: 2.5px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.input-box input:focus,
+.input-box input:valid{
+  border-color: #4070f4;
+}
+form .policy{
+  display: flex;
+  align-items: center;
+}
+form h3{
+  color: #707070;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+.input-box.button input{
+  color: #000000;
+  letter-spacing: 1px;
+  border: none;
+  background: #bb0101;
+  cursor: pointer;
+}
+.input-box.button input:hover{
+  background: #592501;
+}
+form .text h3{
+ color: #333;
+ width: 100%;
+ text-align: center;
+}
+form .text h3 a{
+  color: #000000;
+  text-decoration: none;
+}
+form .text h3 a:hover{
+  text-decoration: underline;
+}
+
+
+
+    /* LOGIN FORM */
+
+.container-form{
+  max-width: 440px;
+  padding: 0 20px;
+  margin: 170px auto;
+}
+.wrapper{
+  width: 100%;
+  background: #71717133;
+  border-radius: 5px;
+  box-shadow: 0px 4px 30px 1px rgb(0, 0, 0);
+}
+.wrapper .title{
+  height: 20px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form{
+  padding: 0px 25px 25px 25px;
+}
+.wrapper form .row label{
+  display: block;
+  padding: 6px;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(251, 251, 251);
+}
+form .row label:focus{
+  border-color: #16a085;
+  box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+}
+.wrapper form input{
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.985);
+  border-radius: 3px;
+  padding: 10 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+  color: white;
+}
+form .button input{
+  background: black;
+}
+form .button input:hover{
+  background: #12876f;
+}
+.wrapper form .signup-link{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+.wrapper form .signup-link a{
+  color: #16a085;
+  text-decoration: none;
+}
+form .signup-link a:hover{
+  text-decoration: underline;
+}
+
 
 
 
 .footer{
-  background:#000000cb;
+  background:#000000fd;
   padding:30px 0px;
   font-family: 'Play', sans-serif;
   text-align:center;
   }
   
   .footer .row{
-  width:100%;
+  width: 100%;
+  overflow: hidden;
   margin:1% 0%;
   padding:0.6% 0%;
   color:gray;
